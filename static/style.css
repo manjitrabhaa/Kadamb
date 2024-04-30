@@ -1,0 +1,209 @@
+/* Style the body */
+body {
+  background: linear-gradient(135deg, #ff6a00, #ee0979, #9c27b0, #3f51b5, #2196f3, #00bcd4, #009688, #4caf50);
+  background-size: 500% 600%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 90% 85%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Style the quote container */
+.quote {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px #316efd, 0 0 40px #ebaeae, 0 0 80px #36ffd0, 0 0 160px rgb(251, 0, 255), 0 0 320px rgb(44, 20, 144), 0 0 640px rgb(223, 28, 220), 0 0 1000px rgb(255, 0, 25), 0 0 2000px #0ff, 0 0 4000px #0ff;
+  height: 400px;
+  overflow: auto;
+  animation: glow 5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px #fff, 0 0 80px #fff, 0 0 1000px rgb(234, 0, 255), 0 0 2000px rgb(14, 34, 221), 0 0 4000px #0ff;
+  }
+
+  100% {
+    box-shadow: 0 0 20px #5712e1, 0 0 40px #ffffff, 0 0 80px #fff, 0 0 160px #00f, 0 0 640px #00f, 0 0 2000px #ff0,
+  }
+}
+
+#quote-text {
+  font-size: 24px;
+  /* Increases the font size of the quote text */
+  margin-bottom: 10px;
+  /* Adds some margin below the quote text */
+}
+
+.quote-author {
+  font-size: 18px;
+  /* Decreases the font size of the author name */
+  font-style: italic;
+  /* Makes the author name italic */
+}
+
+
+
+
+/* Style the button container */
+.button-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Style the copy button */
+
+.copy-btn {
+  background: linear-gradient(135deg, #ff6a00, #ee0979, #9c27b0, #673ab7, #3f51b5, #2196f3, #00bcd4, #009688, #4caf50, #cddc39, #ffeb3b, #ffc107);
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+  border: none;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  animation: glow 2s ease-in-out infinite alternate;
+  transform: scale(1.0);
+
+}
+
+.copy-btn.copied {
+  background: #4caf50;
+  animation: none;
+}
+
+.copy-btn.copied:hover {
+  animation: none;
+}
+
+.copied-message {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(17, 246, 17, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+/* Style the reload button */
+.reload-btn {
+  background: linear-gradient(135deg, #ff6a00, #ee0979, #9c27b0, #673ab7, #3f51b5, #2196f3, #00bcd4, #009688, #4caf50, #cddc39, #ffeb3b, #ffc107);
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+  border: none;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.reload-btn:hover {
+  animation: glow 2s ease-in-out infinite alternate;
+  transform: scale(1.0);
+}
+
+
+#Developer {
+  width: 85%;
+  background: linear-gradient(135deg, #ff6a00, #ee0979, #9c27b0, #673ab7, #3f51b5, #2196f3, #00bcd4, #009688, #4caf50, #cddc39, #ffeb3b, #ffc107);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  border: none;
+  margin: 10px auto;
+  /* Add this line */
+  color: #fff;
+  padding: 15px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+
+#Developer h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #555;
+}
+
+#grievience {
+  width: 85%;
+  text-align: center;
+  background: linear-gradient(135deg, #ff6a00, #ee0979, #9c27b0, #673ab7, #3f51b5, #2196f3, #00bcd4, #009688, #4caf50, #cddc39, #ffeb3b, #ffc107);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  border: none;
+  font-size: 10px;
+  font-style: italic;
+  margin: 10px auto;
+  color: #fff;
+  padding: 15px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+#grievience a {
+  display: inline-block;
+  color: #fff;
+  background-color: #0066cc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+#grievience a:hover {
+  background-color: #004d99;
+  transform: scale(1.1);
+}

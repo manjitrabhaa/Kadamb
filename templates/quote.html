@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kadamb: Blooms of Wisdom</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div id="messages"></div>
+  <div class="quote-container">
+    <div class="quote">
+      <p id="quote-text">{{ quote['quote'] }}</p>
+      <p class="quote-author" id="author-text"> - {{ quote['author'] }}</p>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <form id="copy-form" action="{{ url_for('copy_to_clipboard') }}" method="POST" style="display: inline-block;">
+      <input type="hidden" name="quote" value="{{ quote['quote'] }}">
+      <input type="hidden" name="author" value="{{ quote['author'] }}">
+      <button type="submit" class="copy-btn">Copy Quote</button>
+      <span class="copied-message">Copied!</span>
+    </form>
+
+    <form style="display: inline-block;">
+      <button type="button" class="reload-btn" onclick="window.location.reload()">Next Quote</button>
+    </form>
+  </div>
+  <div id="Developer">
+    <h3>Made with ❤ By <br> Manjit Rabha</h3>
+    <p id="grievience">
+      Thanks for visiting!<br>For grievance/collaboration<br>Mail Me<br>
+      <a href="mailto:manjitrabha42@gmail.com?subject=Feedback&body=Hello, I have some feedback to share with you.">Send Mail</a>
+    </p>
+  </div>
+  <script src="static\app.js"></script>
+  <script>
+    var quoteText = document.getElementById("quote-text");
+    quoteText.scrollTop = quoteText.scrollHeight;
+
+    var copyBtn = document.querySelector(".copy-btn");
+    var copiedMessage = document.querySelector(".copied-message");
+
+    copyBtn.addEventListener("click", function () {
+      copiedMessage.style.display = "inline";
+      setTimeout(function () {
+        copiedMessage.style.display = "none";
+      }, 3000);
+    });
+  </script>
+</body>
+
+</html>
